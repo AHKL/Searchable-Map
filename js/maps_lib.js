@@ -168,6 +168,11 @@
         if ( $("#cbType1").is(':checked')) tempWhereClause.push("Y");
         if ( $("#cbType2").is(':checked')) tempWhereClause.push("N");
         self.whereClause += " AND " + type_column1 + " IN ('" + tempWhereClause.join("','") + "')";
+       var type_column2 = "'Is_Middle_School'";
+        var tempWhereClause = [];
+        if ( $("#cbType3").is(':checked')) tempWhereClause.push("Y");
+        if ( $("#cbType4").is(':checked')) tempWhereClause.push("N");
+        self.whereClause += " AND " + type_column2 + " IN ('" + tempWhereClause.join("','") + "')";
         //-----end of custom filters-----
 
         self.getgeoCondition(address, function (geoCondition) {
